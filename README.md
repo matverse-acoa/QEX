@@ -1,3 +1,6 @@
+Q - Experiment.
+Q - Experience.
+
 # QEX
 
 QuantumSphere (SIC³Q) is the MatVerse security and governance core. It formalizes a **hybrid quantum-classical-algebraic architecture** designed for antifragile decisioning, evidence-first operations, and post-quantum resilience.
