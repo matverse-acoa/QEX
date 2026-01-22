@@ -12,7 +12,21 @@ Decision(action) ∈ {ALLOW, BLOCK, SILENCE, ESCALATE}
 
 **Default**: Fail-closed. Actions without complete evidence or metrics are rejected or escalated.
 
-## 2. Evidence & Ledger Requirements
+## 2. Admissibility & Observability
+QEX treats **admissibility** and **observability** as paired requirements:
+
+- **Admissibility**: an action is allowed only if its evidence, metrics, and policy proofs are complete and verifiable.
+- **Observability**: every admissible action must emit telemetry, receipts, and verification artifacts that can be replayed.
+
+**Invariant**:
+
+```
+Admissible(action) ⇒ Observable(action)
+```
+
+This ensures that no decision can occur without verifiable operational evidence.
+
+## 3. Evidence & Ledger Requirements
 Every critical action produces a receipt with the following properties:
 
 - Deterministic hash of decision inputs.
@@ -26,7 +40,7 @@ Every critical action produces a receipt with the following properties:
 Action ⇒ Evidence ⇒ Verifiability
 ```
 
-## 3. Metrics & Decision Scoring
+## 4. Metrics & Decision Scoring
 Decision admissibility uses multi-objective metrics combining coherence, latency, risk, and cost.
 
 - **Ψ (Coherence Index)**: completeness, consistency, traceability.
@@ -42,7 +56,7 @@ Score = f(Ψ, Θ, CVaR, FQ)
 
 Decision thresholds are policy-defined and must be auditable.
 
-## 4. Post-Quantum Trust (PQC)
+## 5. Post-Quantum Trust (PQC)
 QEX integrates post-quantum primitives for long-term integrity:
 
 - **KEM**: ML-KEM / Kyber class algorithms.
@@ -50,7 +64,7 @@ QEX integrates post-quantum primitives for long-term integrity:
 
 Receipts and ledger entries can be PQC-signed to resist quantum adversaries and harvest-now/decrypt-later attacks.
 
-## 5. FailQuantum Algebra (Thermodynamic Cost)
+## 6. FailQuantum Algebra (Thermodynamic Cost)
 FailQuantum models failure aggregation and energetic irreversibility.
 
 **State model**:
@@ -73,7 +87,7 @@ Where:
 
 This penalty is incorporated into decision scoring to prevent entropic escalation and enforce energy-aware governance.
 
-## 6. Temporal Security Model
+## 7. Temporal Security Model
 QEX treats security as a three-timeframe discipline:
 
 - **Past**: forensic audit and replay.
@@ -84,14 +98,14 @@ QEX treats security as a three-timeframe discipline:
 Threat(t) = PastEvidence + LiveSignals + PredictedRisk
 ```
 
-## 7. Antifragility Guarantees
+## 8. Antifragility Guarantees
 QEX governance is designed to improve under stress by:
 
 - Preferring provable actions over heuristic actions.
 - Penalizing thermodynamically costly transitions.
 - Recording all failures for iterative hardening.
 
-## 8. Compliance and Auditability
+## 9. Compliance and Auditability
 All security and governance decisions are required to be:
 
 - Deterministic.

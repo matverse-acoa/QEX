@@ -15,6 +15,7 @@ This hybrid structure treats **security and governance as intrinsic system laws*
    - Append-only logs for every critical action.
    - Hash chaining and Merkle roots for tamper evidence.
    - Deterministic verification for replay and forensic audit.
+   - Observability guarantees for all admissible actions.
 
 2. **Decision Layer (Governance Kernel)**
    - A normative gate that enforces decision admissibility.
