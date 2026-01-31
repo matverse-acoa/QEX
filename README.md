@@ -25,3 +25,4 @@ QuantumSphere (SIC³Q) is the MatVerse security and governance core. It formaliz
 ## Status
 
 This repository captures the official, production-facing specification of MatVerse/QEX security and governance.
+
