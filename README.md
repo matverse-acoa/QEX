@@ -3,6 +3,7 @@
 > **Versão:** 1.0  
 > **Status:** Experimental/Em desenvolvimento  
 > **Organização:** [matverse-acoa](https://github.com/matverse-acoa)
+
 > **Ferramenta:** https://quantum-dynamics-suite-copy-7e24637f.base44.app/Home
 
 ---
